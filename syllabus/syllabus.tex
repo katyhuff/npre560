@@ -1,0 +1,310 @@
+\documentclass[11pt]{article}
+\usepackage[inner=1in,outer=1in,top=1in,bottom=1in]{geometry}
+\pagestyle{empty}
+\usepackage{placeins}
+\usepackage{graphicx}
+\usepackage{fancyhdr, lastpage, bbding, pmboxdraw}
+\usepackage[usenames,dvipsnames]{color}
+\definecolor{darkblue}{rgb}{0,0,.6}
+\definecolor{darkred}{rgb}{.7,0,0}
+\definecolor{darkgreen}{rgb}{0,.6,0}
+\definecolor{red}{rgb}{.98,0,0}
+\usepackage[colorlinks,pagebackref,pdfusetitle,urlcolor=darkblue,citecolor=darkblue,linkcolor=darkred,bookmarksnumbered,plainpages=false]{hyperref}
+%\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\pagestyle{fancyplain}
+\fancyhf{}
+\lhead{ \fancyplain{}{\CourseTitle} }
+%\chead{ \fancyplain{}{} }
+\rhead{ \fancyplain{}{\CourseSemester \CourseYear} }
+%\rfoot{\fancyplain{}{page \thepage\ of \pageref{LastPage}}}
+\fancyfoot[RO, LE] {page \thepage\ of \pageref{LastPage} }
+\thispagestyle{plain}
+\usepackage{tabularx}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xspace}
+\newcommand{\CourseNumber}{NPRE560}
+\newcommand{\CourseTitle}{Reactor Kinetics and Dynamics\xspace}%
+\newcommand{\CourseSemester}{Spring\xspace}%
+\newcommand{\CourseYear}{2019\xspace}%
+\newcommand{\CourseDays}{TuTh\xspace}%
+\newcommand{\CourseStart}{1:00pm\xspace}%
+\newcommand{\CourseEnd}{2:50pm\xspace}%
+\newcommand{\CourseInstructor}{Prof. Kathryn Huff}
+\newcommand{\CourseInstructorEmail}{kdhuff@illinois.edu}
+\newcommand{\CourseRoom}{104\xspace}%
+\newcommand{\CourseBuilding}{Talbot Laboratory\xspace}%
+\newcommand{\CourseUniversity}{University of Illinois, Urbana-Champaign\xspace}%
+\newcommand{\TeachingAssistant}{TA Name\xspace}%
+\newcommand{\TAOfficeHourDays}{Wednesdays\xspace}%
+\newcommand{\TAOfficeHourStart}{1:00pm\xspace}%
+\newcommand{\TAOfficeHourEnd}{3:00pm\xspace}%
+\newcommand{\TAOfficeHourPlace}{123 Talbot Laboratory\xspace}
+%\newcommand{\Course<++>}{<++>}
+%\newcommand{\Course<++>}{<++>}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{\CourseNumber: \CourseTitle\\}
+\author{\CourseUniversity}
+\date{\CourseSemester \CourseYear}
+\begin{document}
+\maketitle
+%\setlength{\unitlength}{1in}
+\renewcommand{\arraystretch}{2}
+\begin{center}
+\begin{table}[h]
+\begin{tabularx}{\textwidth}{rXrX}
+\hline
+\textbf{Instructor:} & \CourseInstructor & \textbf{Time:} & \CourseDays \CourseStart -- \CourseEnd \\
+\textbf{Email:} &  \href{mailto:\CourseInstructorEmail}{\CourseInstructorEmail} & \textbf{Place:} & \CourseRoom \CourseBuilding\\
+\hline
+\end{tabularx}
+
+\end{table}
+\end{center}
+
+\paragraph{Course Pages:}
+\begin{enumerate}
+        \item \url{https://compass2g.illinois.edu}
+        \item \url{https://github.com/katyhuff/\CourseNumber}
+\end{enumerate}
+
+%\paragraph{TA Office Hours:} The teaching assistant for the course,
+%\TeachingAssistant, will hold office hours \TAOfficeHourDays from
+%\TAOfficeHourStart to \TAOfficeHourEnd in \TAOfficeHourPlace.
+
+\paragraph{Office Hours:} Prof. Huff will hold office hours by appointment only
+in her office, 118 Talbot Laboratory at 104 S. Wright St.  Please make an appointment at 
+\url{katyhuff.youcanbook.me}. If your colleagues might be helpful, please 
+discuss your questions with them directly before scheduling office hours.
+
+\paragraph{Main References:}
+A few essential references for this course will be assigned as readings and 
+will be the source of homework problems. The key texts for this course are
+\cite{ott_introductory_1985} and
+\cite{hetrick_dynamics_1993}.
+I also recommend 
+\cite{stacey_nuclear_2007}, \cite{bell_nuclear_1970} and
+\cite{duderstadt_transport_1979} for conceptual review as well as
+\cite{lewis_computational_1993} for computational methods details.
+\bibliographystyle{unsrt}
+\renewcommand{\refname}{\normalfont\selectfont\normalsize}
+\bibliography{syllabus}
+
+\paragraph{Objectives:}
+\begin{itemize}
+\item Incorporate delayed neutrons into diffusion and transport neutron balances
+\item Develop the point reactor kinetics equations
+\item Apply, analytically and numerically, the point reactor kinetics equations
+\item Apply space dependent, multigroup reactor kinetics
+\item Understand and interperet reactivity measurements
+\item Analyze dynamics via reactor noise
+\item Interrogate advanced topics 
+\item Engage critically with original kinetics and dynamics research
+\end{itemize}
+
+\paragraph{Prerequisites:}
+\begin{itemize}
+        \item NPRE455 or equivalent (required) 
+        \item NPRE555 (desired, but optional)
+\end{itemize}
+
+\paragraph{Grading Policy:} Grades will be assigned as a weighted sum of the
+following work. Approximately 5 homework assignments, 3 computational projects, 
+and occasional engagement with the literature (journal club activity) will comprise the 
+grade.
+
+\paragraph{Homework:} There will be a small number of homework assignments 
+throughout the semester, approximately one every three weeks.
+
+\paragraph{Computational Projects:} The computational projects will be 
+submitted via GitHub Classroom and will be spaced evenly through the semester. 
+The final project will be presented during the time reserved for this course's 
+final exam.
+
+\paragraph{Journal Club:} A small library of original research papers will be 
+provided for students to engage with. Individual students will be  assigned to 
+each paper. Students will accordingly present a review and summary of their 
+assigned papers to the class (15 minutes) over the course of the semester.  
+Participation in class discussion during this activity by the student audience 
+will constitute a fraction of the awarded grade for this activity.
+
+\begin{table}[h]
+\begin{tabularx}{\textwidth}{Xr}
+        \textbf{Work} & \textbf{Weight} \\
+\hline
+\textbf{Journal Club}    & (20\%)  \\
+\textbf{Homework}    & (20\%)  \\
+\textbf{Project 1}    & (20\%)  \\
+\textbf{Project 2}    & (20\%)  \\
+\textbf{Final Project}  & (20\%)  \\
+\hline
+\textbf{Total}       & (100\%)\\
+\end{tabularx}
+\end{table}
+
+\paragraph{Important Dates:}
+\begin{center} \begin{minipage}{3.8in}
+\begin{flushleft}
+%Midterm \#1      \dotfill 10:00-10:50pm, 3, 2017 \\
+%Midterm \#2      \dotfill 10:00-10:50pm, 7, 2017\\
+%Project Deadline \dotfill ~Month Day \\
+Project 1    \dotfill  Feb 26, 2019\\
+Project 2  \dotfill  Apr 2, 2019\\
+Final Project    \dotfill 7:00-10:00pm, May 3, 2019\\
+\end{flushleft}
+\end{minipage}
+\end{center}
+
+\paragraph{Class Policies:}
+
+
+\begin{itemize}
+\item[] \textbf{Integrity:} This is an institution of higher
+learning. You will be swiftly ejected from the course if you are caught
+undermining its integrity. Note the
+\href{http://www.provost.illinois.edu/academicintegrity/students.html}{Student's
+Quick Reference Guide to Academic Integrity} and the
+\href{http://studentcode.illinois.edu/article1_part4_1-401.html}{Academic
+Integrity Policy and Procedure}.
+\item[] \textbf{Attendance:} Regular attendance is mandatory. Request approval for absence for extenuating circumstances prior to absence.
+\item[] \textbf{Electronics:} Active participation is essential and expected.
+        Accordingly, students must turn off all electronic devices (laptop,
+        tablets, cellphones, etc.) during class. Exceptions may be granted for
+        laptops if engaging in computational exercises or taking notes.
+\item[] \textbf{Collaboration:} Collaboratively reviewing course materials and studying for exams with fellow students can be enriching.  This is recommended.  However, unless otherwise instructed, homework assignments are to be completed independently and materials submitted as homework should be the result of one's own independent work.
+\item[] \textbf{Late Work:} Late work will not be accepted. Plan ahead.
+
+\item[] \textbf{Make-up Work:} There will be no negotiation about late work
+        except in the case of absence documented by an absence letter from the
+        Dean of Students.  The university policy for requesting such a letter
+        is in
+        \href{http://studentcode.illinois.edu/article1_part5_1-501.html}{the
+        Student Code}. Please note that such a letter is appropriate for many
+        types of conflicts, but that religious conflicts require special early
+        handling. In accordance with university policy, students seeking an
+        excused absence for religious reasons should complete the
+	\href{http://odos.illinois.edu/community-of-care/resources/students/religious-observances/}{Request for Accommodation for Religious Observances Form}
+        The student should submit this
+        form to the instructor and the Office of the Dean of Students by the end of the
+        second week of the course to which it applies.
+
+
+\item[] \textbf{Grade Disputes:} It is important that you understand and agree
+        with the grade you receive on assignments and exams. If you would like
+        to dispute your score, you must send an explanation by email to Prof.
+        Huff within one week of recieving the grade.
+        \textbf{Do not expect me to regrade anything while in conversation with
+        you} as that would not be fair to the other students in the class, whose
+        homeworks were graded without them present.  If you request a regrade,
+        be aware that the entire assignment will be regraded and is subject to
+        double-jeopardy: it is possible that your score will go down.
+        Regrade requests should be based on an error on my part (e.g., adding
+        up the points incorrectly) or what you suspect is a misunderstanding of
+        your work (e.g., arriving at the correct answer using an unexpected
+        technique). Regrade requests that argue with the rubric (e.g., ``this is
+        wrong, but you took too many points off'') will be returned without
+        consideration.
+        \textbf{Your work should stand alone.} If an assignment is disorganized or
+        ambiguous, and requires an extensive explanation to the grader, you
+        will likely still lose points. The homeworks not only evaluate your
+        understanding of the material - they also evaluate your ability to
+        communicate that understanding clearly and concisely.
+\end{itemize}
+
+\paragraph{Accessibility:} I hope that this course will be inclusive and
+accommodating for all learners. As such, I am committed upholding the vision
+and values of \href{http://www.inclusiveillinois.illinois.edu/index.html}{Inclusive Illinois}
+in my
+classroom.  With regard to accommodating all learners, please note that many
+resources are provided through
+\href{http://disability.illinois.edu/academic-support/accommodations}{the
+Division of Disability Resources and Educational Services}.  To request
+particular accommodations, please contact me as soon as possible so that we can
+work out any necessary arrangements.
+
+\paragraph{Safety:}
+Emergencies can happen anywhere and at any time, so it’s important that we take
+a minute to prepare for a situation in which our safety could depend on our
+ability to react quickly. Take a moment to learn the different ways to leave
+this building. If there’s ever a fire alarm or something like that, you’ll know
+how to get out and you’ll be able to help others get out. Next, figure out the
+best place to go in case of severe weather - we’ll need to go to a low-level in
+the middle of the building, away from windows. And finally, if there’s ever
+someone trying to hurt us, our best option is to run out of the building. If we
+cannot do that safely, we’ll want to hide somewhere we can’t be seen, and we’ll
+have to lock or barricade the door if possible and be as quiet as we can. We
+will not leave that safe area until we get an Illini-Alert confirming that it’s
+safe to do so. If we can’t run or hide, we’ll fight back with whatever we can
+get our hands on. If you want to better prepare yourself for any of these
+situations, visit \url{police.illinois.edu/safe}. Remember you can sign up for
+emergency text messages at \url{emergency.illinois.edu}. This
+\href{http://police.illinois.edu/dpsapp/wp-content/uploads/2017/08/syllabus-attachment.pdf}{one-page-handout}
+discusses the Illinois Run-Hide-Fight strategy.
+
+
+\paragraph{Other Resources:}
+University students typically experience a wide range of stressors during their
+time on campus. Accordingly, campus resources exist to help students manage
+stress levels, mental health, physical health, and emergencies while navigating
+this environment. I hope you will take advantage of these campus resources as
+soon as they can be of help.
+
+\begin{itemize}
+\item \href{https://campusrec.illinois.edu/}{The Campus Recreational Centers}
+\item \href{http://counselingcenter.illinois.edu/}{The Counselling Center}
+\item \href{http://www.mckinley.illinois.edu/clinics/mental\_health.htm}{The McKinley Mental Health Clinic}
+\item \href{http://odos.illinois.edu/emergency/}{The Emergency Dean}
+\end{itemize}
+
+\pagebreak
+\FloatBarrier
+\renewcommand{\arraystretch}{1}
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{lllcllll}
+\multicolumn{8}{c}{\textbf{Course Schedule:}\textit{ Note that this schedule is subject to change}}\\
+&&&&&&&\\
+\textbf{Date} & \textbf{Week} & \textbf{Day} & \textbf{Unit} & \textbf{Chap.} & \textbf{Chap.} & \textbf{HW} & \textbf{HW}\\
+              &  &  & & \textbf{Ott}& \textbf{Hetrick} & \textbf{Given} & \textbf{Due}\\
+\hline
+\hline
+01-15 & 1 & T  & Intro                  & 1  & 1 & HW1  & \\
+01-17 & 1 & Th & Delayed Neutrons       & 2  & 1 &      & \\
+01-22 & 2 & T  & Simple PKE             & 3  & 1 & CP1  & \\
+01-24 & 2 & Th & Perturbation           & 4  & 1 &      & \\
+01-29 & 3 & T  & Exact PKE              & 5  & 1 &      & \\
+01-31 & 3 & Th & Inhour                 & 5  & 1 & HW2  & HW1\\
+02-05 & 4 & T  & Basic Stability        & 5  & 2 &      & \\
+02-07 & 4 & Th & PKE Solutions          & 6  & 2 &      & \\
+02-12 & 5 & T  & PKE Solutions          & 6  & 2 &      & \\
+02-14 & 5 & Th & Microkinetics          & 7  & 2 &      & \\
+02-19 & 6 & T  & Prompt Jump            & 8  & 5 & HW3  & HW2\\
+02-21 & 6 & Th & Ramp/Step              & 8  & 5 &      & \\
+02-26 & 7 & T  & Reactivity Measurement & 9  & 2 & CP2  & CP1\\
+02-28 & 7 & Th & Feedbacks              & 10 & 3 &      & \\
+03-05 & 8 & T  & Feedbacks              & 10 & 3 &      & \\
+03-07 & 8 & Th & Feedbacks              & 10 & 3 &      & \\
+03-12 & 9 & T  & Numerical Methods      & 10 & 4 &      & \\
+03-14 & 9 & Th & Numerical Methods      & 10 & 4 & HW4  & HW3\\
+03-19 & 10 & T  & \textbf{Spring Break} &    &   &      & \\
+03-21 & 10 & Th & \textbf{Spring Break} &    &   &      & \\
+03-26 & 11 & T  & Linear Stability      & 10 & 6 &      & \\
+03-28 & 11 & Th & Linear Stability      & 10 & 6 &      & \\
+04-02 & 12 & T  & Non-linear Stability  & 10 & 7 & CP3  & CP2\\
+04-04 & 12 & Th & Reactor Applications  & 10 & 7 &      & \\
+04-09 & 13 & T  & Reactor Applications  & 10 & 7 &      & \\
+04-11 & 13 & Th & Space Dependence      & 11 & 8 &      & \\
+04-16 & 14 & T  & Space Dependence      & 11 & 8 & HW5  & HW4\\
+04-18 & 14 & Th & Space Dependence      & 11 & 8 &      & \\
+04-23 & 15 & T  & Space Dependence      & 11 & 8 &      & \\
+04-25 & 15 & Th & Space Dependence      & 11 & 8 &      & \\
+04-30 & 16 & T  & Open Questions        &    &   &      & HW5\\
+05-02 & 16 & Th & \textbf{Reading Day}  &    &   &      & \\
+05-03 & 16 & M & \textbf{Final Project} &    &   &      & CP3 \\
+\end{tabular}
+\end{center}
+\end{table}
+%%%%%% THE END 
+\end{document} 
